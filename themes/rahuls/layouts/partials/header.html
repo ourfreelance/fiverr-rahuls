@@ -1,7 +1,7 @@
 <header x-data="{open: false}" class="navbar fixed top-0 left-0 w-full z-50 bg-white">
   <div class="fixed top-0 left-0 w-full lg:static">
     <div
-      class="max-w-screen-2xl mx-auto lg:h-auto flex items-center justify-between p-5 gap-3 lg:px-0 lg:gap-10 w-full bg-white lg:bg-transparent">
+      class="max-w-screen-2xl mx-auto lg:h-auto flex items-center justify-between px-5 py-3 md:p-5 gap-3 lg:px-0 lg:gap-10 w-full bg-white lg:bg-transparent">
       <a
         href="/"
         class="relative z-20 font-medium text-2xl block w-1/2 lg:w-auto whitespace-nowrap">
@@ -38,12 +38,12 @@
       </button>
 
       <div
-        class="fixed lg:static top-0 left-0 -translate-y-[150%] lg:translate-y-0 transition-transform duration-500 bg-white lg:bg-transparent w-full lg:w-auto pb-5 z-10"
+        class="fixed lg:static top-0 left-0 -translate-y-[150%] lg:translate-y-0 transition-transform duration-500 bg-white lg:bg-transparent w-full lg:w-auto z-10"
         :class="open ? '!translate-y-0' : '-translate-y-[150%]'">
         <nav
           class="flex flex-col lg:flex-row items-center w-full lg:w-auto gap-3 lg:gap-10 font-medium pt-24 lg:pt-0">
           <a
-            href="#home"
+            href="/"
             class="hover:text-primary bg-white lg:bg-transparent px-5 py-3 lg:p-0 rounded-lg w-full lg:w-auto transition"
             >Home</a
           >

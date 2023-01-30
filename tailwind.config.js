@@ -20,6 +20,7 @@ module.exports = {
         },
         primary: {
           DEFAULT: '#005D65',
+          green: '#004A51',
           gray: '#F4F4F4',
           dark: '#222831'
         },
