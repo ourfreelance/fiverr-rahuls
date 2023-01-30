@@ -1,0 +1,35 @@
+<section
+  x-data="{open: false}"
+  id="hero"
+  class="grid grid-cols-1 lg:grid-cols-2 lg:space-x-10 mt-0 md:mt-10 items-center lg:bg-white">
+  <div class="mt-10 lg:mt-0 order-last lg:order-first px-5 xl:pl-[8.3rem]">
+    <div class="">
+      <div class="w-20 h-2 rounded-full bg-primary mb-5"></div>
+      <div class="flex items-center gap-x-3 font-lato text-xl lg:text-2xl font-bold text-primary">
+        Hi <img class="w-7" src="/assets/images/hi.webp" alt="hi" />, i'm
+      </div>
+      <h1 class="text-primary text-3xl lg:text-4xl font-bold my-4 uppercase">{{ .name }}</h1>
+      <h2 class="text-xl lg:text-2xl font-medium">{{ .skill }}</h2>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center gap-4 mt-12">
+      <a
+        href="mailto:{{ .email }}"
+        class="flex items-center justify-center gap-x-3 rounded-lg px-9 py-3.5 bg-primary text-white">
+        <img src="/assets/images/icons/email.svg" alt="email" />
+        Email Me
+      </a>
+      <a
+        href="{{ .resume }}"
+        class="flex items-center justify-center gap-x-3 rounded-lg px-9 py-3.5 border-2 border-primary text-primary hover:opacity-90 transition">
+        <img src="/assets/images/icons/file.svg" alt="resume" />
+        Resume
+      </a>
+    </div>
+  </div>
+  <div class="relative lg:justify-self-end rounded-lg order-first lg:order-last">
+    <img
+      class="w-full aspect-square md:aspect-[15/10] object-cover"
+      src="{{ .photo }}"
+      alt="profile" />
+  </div>
+</section>

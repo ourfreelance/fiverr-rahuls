@@ -1,0 +1,43 @@
+<section id="skills" class="mt-10 bg-white py-14">
+  <div class="max-w-screen-xl mx-auto lg:grid grid-cols-2 gap-x-20">
+    <div class="relative">
+      <div class="aspect-[10/12] h-full overflow-hidden bg-red-300 md:rounded-lg">
+        <img src="{{ .photo }}" class="w-full h-full object-cover" />
+      </div>
+      <div class="bg-primary-grays">
+        <a href=""></a>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center mt-10 lg:mt-0 px-5">
+      {{ partial "components/section-title.html" (dict "title" "About Me" )}}
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold mb-5">Who am i?</h2>
+        <p class="text-gray">
+         {{ .description }}
+        </p>
+      </div>
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold mb-5">Experience with:</h2>
+        <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+          {{ range .experiences }}
+          <div class="px-12 py-3 rounded-lg border border-light-gray text-center">{{ . }}</div>
+          {{ end }}
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+        <a
+          href="mailto:{{ .email }}"
+          class="flex items-center justify-center gap-x-3 rounded-lg px-9 py-3.5 bg-primary text-white">
+          <img src="/assets/images/icons/email.svg" alt="email" />
+          Email Me
+        </a>
+        <a
+          href="{{ .resume }}"
+          class="flex items-center justify-center gap-x-3 rounded-lg px-9 py-3.5 border-2 border-primary text-primary hover:opacity-90 transition">
+          <img src="/assets/images/icons/file.svg" alt="resume" />
+          Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

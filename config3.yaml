@@ -1,0 +1,76 @@
+baseURL: "https://blog.wibucode.com/"
+languageCode: "id-ID"
+defaultContentLanguage: "id"
+title: "Wibucode Blog"
+summaryLength: 10
+paginate: 5
+disqusShortname: "wibucodeblog"
+enableGitInfo: true
+pygmentsCodefences: true 
+pygmentsUseClasses: true
+permalinks:
+  '/': '/:section/:filename/'
+
+taxonomies:
+  category: "category"
+  tag: "tags"
+  
+markup:
+  tableOfContents:
+    endLevel: 6
+    startLevel: 1
+
+related:
+  includeNewer: false
+  threshold: 80
+  toLower: false
+  indices: 
+    - name: 'keywords'
+      weight: 100
+    - name: 'date'
+      weight: 10
+  
+  
+
+# json
+outputs:
+  home: ["html", "json"]
+
+params:
+  site_name: "Wibucode Blog"
+  description: "Wibucode blog description"
+  keywords: "blog"
+  locale: "en-US"
+  type: "website"
+  categories: 
+    - name: 'Programming'
+      slug: 'programming'
+    - name: 'Design'
+      slug: 'design'
+
+  instagram: '#'
+  twitter: '#'
+  facebook: '#'
+  youtube: '#'
+  community:
+    - name: 'Facebook'
+      url: 'https://web.facebook.com/groups/857394411703003?_rdc=1&_rdr'
+    - name: 'Discord'
+      url: 'https://discord.com/invite/EFpjWMTU'
+    - name: 'Telegram'
+      url: 'https://t.me/wibucode'
+    - name: 'Whatsapp'
+      url: 'https://chat.whatsapp.com/DLVUCr4Tr95CfXPhE5CVT5'
+  partner:
+    - name: 'Peddium'
+      url: 'https://peddium.com'
+    - name: 'GSC ID'
+      url: 'https://www.instagram.com/gdscindonesia/'
+    - name: 'Wibucode Dev'
+      url: 'https://wibucode.dev'
+
+
+
+
+
+

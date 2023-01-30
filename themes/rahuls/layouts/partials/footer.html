@@ -1,0 +1,45 @@
+<footer class="font-lato mt-32 px-5 bg-primary text-white py-14">
+  <div class="flex flex-col lg:flex-row gap-x-10 justify-between w-full max-w-screen-xl mx-auto">
+    <div class="mb-5 lg:mb-0">
+      <h2 class="text-lg font-medium mb-4">Company</h2>
+      {{ range .Site.Params.Company }}
+      <a href="{{ .url }}" class="block mb-3 opacity-70 hover:opacity-100 transition" target="_blank">{{ .name }}</a>
+      {{ end}}
+    </div>
+
+    <div class="mb-5 lg:mb-0">
+      <h2 class="text-lg font-medium mb-4">Resources</h2>
+      {{ range .Site.Params.Resources }}
+      <a href="{{ .url }}" class="block mb-3 opacity-70 hover:opacity-100 transition" target="_blank">{{ .name }}</a>
+      {{ end}}
+    </div>
+
+    <div class="mb-5 lg:mb-0">
+      <h2 class="text-lg font-medium mb-4">Help and Support</h2>
+      {{ range .Site.Params.Help_and_support }}
+      <a href="{{ .url }}" class="block mb-3 opacity-70 hover:opacity-100 transition" target="_blank">{{ .name }}</a>
+      {{ end}}
+    </div>
+
+    <div class="mb-5 lg:mb-0">
+      <h2 class="text-lg font-medium mb-4">Terms</h2>
+      {{ range .Site.Params.terms }}
+      <a href="{{ .url }}" class="block mb-3 opacity-70 hover:opacity-100 transition" target="_blank">{{ .name }}</a>
+      {{ end}}
+    </div>
+  </div>
+  <div class="md:text-center mt-14 tracking-wider">
+    Copyright © <span class="year-now"></span> {{ .Site.Params.Author }}. All rights reserved.
+  </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<script>
+  const yearNow = document.querySelector('.year-now');
+  yearNow.textContent = new Date().getFullYear()
+</script>
+
+<script type="module" src="/assets/js/main.js"></script>

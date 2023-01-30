@@ -1,0 +1,21 @@
+{
+  "name": "rahuls",
+  "version": "1.0.1",
+  "description": "rahuls description",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./tailwind.css -o ./themes/rahuls/static/assets/css/styles.css --watch --minify",
+    "commit": "git add . && git commit -m"
+  },
+  "keywords": [
+    "form"
+  ],
+  "author": "rahuls",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "tailwindcss": "^3.1.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.3"
+  }
+}

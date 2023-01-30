@@ -1,0 +1,60 @@
+<section id="portfolios" class="mt-10 max-w-screen-2xl mx-auto px-5">
+  
+  {{ partial "components/section-title.html" (dict 
+    "title" .title
+    "description" .description
+  )}}
+
+  
+  {{ if .portfolios }}
+  <div class="post-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+    
+    {{ range .portfolios }}
+      {{ partial "components/post-card.html" (dict 
+        "resources" .Resources
+        "date" .Date.Local
+        "params" .Params
+        "summary" .Summary
+        "url" .RelPermalink
+      )}}
+
+      
+    {{end}}
+  </div>
+
+  <div class="mt-12 flex justify-center w-full">
+    {{- if .paginator.HasNext -}}
+      <a href="{{ .paginator.Next.URL }}" class="post-load-more block py-3 md:py-4 px-8 rounded-lg bg-primary text-white font-medium hover:opacity-90 transition">
+        Load More
+      </a>
+    {{- end -}}
+
+    
+  </div>
+
+  {{ else}}
+    <div class="text-primary-gray/70 font-medium text-lg">
+      Post not found.
+    </div>
+  {{ end }}
+
+</section>
+
+{{ define "scripts" }}
+
+<script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+  <script>
+
+    const postContainer = document.querySelector('.post-container');
+
+    const options = {
+      path: '.post-load-more',
+      append: '.post-card',
+      loadOnScroll: false,
+      button: '.post-load-more',
+      history: null
+    };
+
+    const infScroll = new InfiniteScroll(postContainer, options);
+  </script>
+{{ end }}

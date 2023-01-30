@@ -1,0 +1,11 @@
+{{ $img := .Page.Resources.GetMatch (.Get "src") }}
+{{ $alt := .Get "alt" }}
+{{ $showAlt := .Get "show-alt" }}
+{{ with $img }}
+  <figure class="py-10">
+    <img class="max-w-full" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $alt }}">
+    {{ if (eq $showAlt "true" )}}
+      <figcaption>{{ $alt }}</figcaption>
+    {{ end}}
+  </figure>
+{{ end }}

@@ -1,0 +1,52 @@
+baseURL: "https://rahuls.com"
+languageCode: "en-EN"
+defaultContentLanguage: "en"
+title: "Rahuls"
+summaryLength: 30
+RelativeURLs: false
+CanonifyURLs: true
+enableRobotsTXT: true
+enableEmoji: true
+paginate: 6
+paginatePath: "page"
+enableGitInfo: true
+pygmentsCodefences: true 
+pygmentsUseClasses: true
+theme: "rahuls"
+
+taxonomies:
+  category: 'categories'
+  tag: 'tags'
+
+params:
+  author: "Rahuls"
+  site_name: "Rahuls"
+  description: "Rahuls Description"
+  locale: "en-US"
+  type: "website"
+  email: 'rahuls@gmail.com'
+  # for Social Media on Header
+  twitter_url: "#"
+  linkedin_url: "#"
+  github_url: "#"
+
+  company:
+    - name: 'About'
+      url: '#'
+    - name: 'Blog'
+      url: '#'
+  resources:
+    - name: 'All Product'
+      url: '#'
+    - name: 'Documentation'
+      url: '#'
+  help_and_support:
+    - name: 'License'
+      url: '#'
+    - name: 'Contact'
+      url: '#'
+  terms:
+    - name: 'Terms And Condition'
+      url: '#'
+    - name: 'Privacvy Policy'
+      url: '#'

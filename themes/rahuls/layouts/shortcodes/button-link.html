@@ -1,0 +1,5 @@
+<div class="not-prose py-12 {{ with .Get "center" }}{{ if(eq . "true") }}text-center{{end}}{{end}}">
+  <a {{ with .Get "href" }}href="{{.}}"{{ end }} class="px-8 py-4 rounded-lg bg-primary text-white">
+    {{ .Inner }}
+  </a>
+</div>

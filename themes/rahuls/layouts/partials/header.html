@@ -1,0 +1,64 @@
+<header x-data="{open: false}" class="navbar fixed top-0 left-0 w-full z-50 bg-white">
+  <div class="fixed top-0 left-0 w-full lg:static">
+    <div
+      class="max-w-screen-2xl mx-auto lg:h-auto flex items-center justify-between p-5 gap-3 lg:px-0 lg:gap-10 w-full bg-white lg:bg-transparent">
+      <a
+        href="/"
+        class="relative z-20 font-medium text-2xl block w-1/2 lg:w-auto whitespace-nowrap">
+        {{ .Site.Params.Author }}
+      </a>
+
+      <button
+        @click="open = !open"
+        class="relative z-20 lg:hidden h-12 w-12 aspect-square rounded-lg flex items-center justify-center">
+        <!-- menu -->
+        <svg
+          x-show="!open"
+          class="w-9 h-9"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M3 13.5H15C15.4125 13.5 15.75 13.1625 15.75 12.75C15.75 12.3375 15.4125 12 15 12H3C2.5875 12 2.25 12.3375 2.25 12.75C2.25 13.1625 2.5875 13.5 3 13.5ZM3 9.75H15C15.4125 9.75 15.75 9.4125 15.75 9C15.75 8.5875 15.4125 8.25 15 8.25H3C2.5875 8.25 2.25 8.5875 2.25 9C2.25 9.4125 2.5875 9.75 3 9.75ZM2.25 5.25C2.25 5.6625 2.5875 6 3 6H15C15.4125 6 15.75 5.6625 15.75 5.25C15.75 4.8375 15.4125 4.5 15 4.5H3C2.5875 4.5 2.25 4.8375 2.25 5.25Z"
+            fill="black" />
+        </svg>
+
+        <!-- menu close -->
+        <svg
+          x-cloak
+          x-show="open"
+          class="w-9 h-9"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.725 4.28267C13.6556 4.21314 13.5732 4.15798 13.4825 4.12034C13.3917 4.08271 13.2945 4.06333 13.1962 4.06333C13.098 4.06333 13.0008 4.08271 12.91 4.12034C12.8193 4.15798 12.7369 4.21314 12.6675 4.28267L9 7.94267L5.3325 4.27517C5.26306 4.20573 5.18063 4.15065 5.08991 4.11307C4.99918 4.07549 4.90195 4.05615 4.80375 4.05615C4.70555 4.05615 4.60832 4.07549 4.51759 4.11307C4.42687 4.15065 4.34444 4.20573 4.275 4.27517C4.20556 4.3446 4.15048 4.42704 4.1129 4.51776C4.07533 4.60848 4.05598 4.70572 4.05598 4.80392C4.05598 4.90212 4.07533 4.99935 4.1129 5.09008C4.15048 5.1808 4.20556 5.26323 4.275 5.33267L7.9425 9.00017L4.275 12.6677C4.20556 12.7371 4.15048 12.8195 4.1129 12.9103C4.07533 13.001 4.05598 13.0982 4.05598 13.1964C4.05598 13.2946 4.07533 13.3919 4.1129 13.4826C4.15048 13.5733 4.20556 13.6557 4.275 13.7252C4.34444 13.7946 4.42687 13.8497 4.51759 13.8873C4.60832 13.9248 4.70555 13.9442 4.80375 13.9442C4.90195 13.9442 4.99918 13.9248 5.08991 13.8873C5.18063 13.8497 5.26306 13.7946 5.3325 13.7252L9 10.0577L12.6675 13.7252C12.7369 13.7946 12.8194 13.8497 12.9101 13.8873C13.0008 13.9248 13.0981 13.9442 13.1962 13.9442C13.2944 13.9442 13.3917 13.9248 13.4824 13.8873C13.5731 13.8497 13.6556 13.7946 13.725 13.7252C13.7944 13.6557 13.8495 13.5733 13.8871 13.4826C13.9247 13.3919 13.944 13.2946 13.944 13.1964C13.944 13.0982 13.9247 13.001 13.8871 12.9103C13.8495 12.8195 13.7944 12.7371 13.725 12.6677L10.0575 9.00017L13.725 5.33267C14.01 5.04767 14.01 4.56767 13.725 4.28267Z"
+            fill="black" />
+        </svg>
+      </button>
+
+      <div
+        class="fixed lg:static top-0 left-0 -translate-y-[150%] lg:translate-y-0 transition-transform duration-500 bg-white lg:bg-transparent w-full lg:w-auto pb-5 z-10"
+        :class="open ? '!translate-y-0' : '-translate-y-[150%]'">
+        <nav
+          class="flex flex-col lg:flex-row items-center w-full lg:w-auto gap-3 lg:gap-10 font-medium pt-24 lg:pt-0">
+          <a
+            href="#home"
+            class="hover:text-primary bg-white lg:bg-transparent px-5 py-3 lg:p-0 rounded-lg w-full lg:w-auto transition"
+            >Home</a
+          >
+          <a
+            href="/about-company"
+            class="hover:text-primary bg-white lg:bg-transparent px-5 py-3 lg:p-0 rounded-lg w-full lg:w-auto transition"
+            >About Company</a
+          >
+          <a
+            href="/blog"
+            class="hover:text-primary bg-white lg:bg-transparent px-5 py-3 lg:p-0 rounded-lg w-full lg:w-auto transition"
+            >Blog</a
+          >
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

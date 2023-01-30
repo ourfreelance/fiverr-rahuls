@@ -1,0 +1,47 @@
+{{ define "main" }}
+  
+  <main class="mx-auto space-y-32 lg:space-y-40 bg-light">
+
+    {{ $paginate := .Paginate (where .Site.RegularPages "Type" "portfolio" )}}
+    {{ $paginator := .Paginator }}
+
+    {{ range (where .Site.Pages "Type" "home")}}
+
+      {{ if(eq .Params.Section_type "hero")}}
+        {{ partial "home/hero.html" (dict
+          "name" .Params.Name
+          "photo" .Params.Photo
+          "skill" .Params.Skill
+          "email" .Params.Email
+          "resume" .Params.Resume
+        )}}
+      {{ end }}
+      
+      {{ if (eq .Params.Section_type "portfolio")}}
+        {{ partial "home/portfolio.html" (dict 
+          "title" .Params.Title
+          "description" .Params.Description
+          "portfolios" $paginate.Pages
+          "paginator" $paginator
+        )}}
+      {{ end }}
+
+      {{ if(eq .Params.Section_type "about")}}
+        {{ partial "home/about.html" (dict
+          "name" .Params.Name
+          "photo" .Params.Photo
+          "description" .Params.Description
+          "experiences" .Params.Experiences
+          "email" .Params.Email
+          "resume" .Params.Resume
+        )}}
+      {{ end }}
+
+    {{ end }}
+
+    
+  </main>
+
+{{end}}
+
+

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-5 lg:scroll-pt-32 overflow-x-hidden">
+  
+  {{- partial "head.html" . -}}
+
+<body class="font-lexend bg-white overflow-x-hidden pt-20 md:pt-0">
+
+  {{- partial "header.html" . -}}
+  {{- block "main" . }}{{- end }}
+  {{- partial "footer.html" . -}} 
+
+  {{ partial "search-index.html" . }}
+  {{- block "scripts" . }}{{- end }}
+</body>
+</html>

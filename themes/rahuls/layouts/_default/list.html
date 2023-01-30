@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main class="pt-32 max-w-screen-xl px-5 mx-auto space-y-52 ">
+  <section class="mt-10">
+
+    {{ partial "components/section-title.html" (dict 
+      "title" .Params.Title
+      "description" .Params.Description
+    )}}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10">
+      {{ range .Pages }}
+        {{if not (in .Params.IsIndex true)}}
+          {{ partial "components/post-card.html" (dict 
+            "date" .Date.Local
+            "params" .Params
+            "summary" .Summary
+            "url" .RelPermalink
+          )}}
+        {{ end}}
+      {{end}}
+    </div>
+  
+  </section>
+</main>
+{{ end }}
