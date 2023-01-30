@@ -25,10 +25,7 @@ params:
   locale: "en-US"
   type: "website"
   email: 'rahuls@gmail.com'
-  # for Social Media on Header
-  twitter_url: "#"
-  linkedin_url: "#"
-  github_url: "#"
+
 
   company:
     - name: 'About'

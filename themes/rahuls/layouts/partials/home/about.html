@@ -1,11 +1,28 @@
 <section id="skills" class="mt-10 bg-white py-14">
   <div class="max-w-screen-xl mx-auto lg:grid grid-cols-2 gap-x-20">
     <div class="relative">
-      <div class="aspect-[10/12] h-full overflow-hidden bg-red-300 md:rounded-lg">
+      <div class="aspect-[10/12] h-full overflow-hidden bg-red-300 md:rounded-xl">
         <img src="{{ .photo }}" class="w-full h-full object-cover" />
       </div>
-      <div class="bg-primary-grays">
-        <a href=""></a>
+      <div class="absolute bottom-5 right-5 bg-primary-gray rounded-lg flex items-center gap-x-5 px-5 py-4">
+        <a href="{{ .social_media.facebook_url }}" class="bg-white rounded-lg aspect-square w-12 flex items-center justify-center hover:-translate-y-1 transition hover:shadow-md">
+          <img src="/assets/images/social-media/facebook.svg" alt="facebook">
+        </a>
+        <a href="{{ .social_media.twitter_url }}" class="bg-white rounded-lg aspect-square w-12 flex items-center justify-center hover:-translate-y-1 transition hover:shadow-md">
+          <img src="/assets/images/social-media/twitter.svg" alt="facebook">
+        </a>
+        <a href="{{ .email }}" class="bg-white rounded-lg aspect-square w-12 flex items-center justify-center hover:-translate-y-1 transition hover:shadow-md">
+          <img src="/assets/images/social-media/email.svg" alt="email">
+        </a>
+        <a href="{{ .social_media.telegram_url }}" class="bg-white rounded-lg aspect-square w-12 flex items-center justify-center hover:-translate-y-1 transition hover:shadow-md">
+          <img src="/assets/images/social-media/telegram.svg" alt="telegram">
+        </a>
+        <a href="{{ .social_media.linkedin_url }}" class="bg-white rounded-lg aspect-square w-12 flex items-center justify-center hover:-translate-y-1 transition hover:shadow-md">
+          <img src="/assets/images/social-media/linkedin.svg" alt="linkedin">
+        </a>
+        <a href="{{ .social_media.whatsapp_url }}" class="bg-white rounded-lg aspect-square w-12 flex items-center justify-center hover:-translate-y-1 transition hover:shadow-md">
+          <img src="/assets/images/social-media/whatsapp.svg" alt="whatsapp">
+        </a>
       </div>
     </div>
     <div class="flex flex-col justify-center mt-10 lg:mt-0 px-5">
@@ -27,13 +44,13 @@
       <div class="flex flex-col lg:flex-row lg:items-center gap-4">
         <a
           href="mailto:{{ .email }}"
-          class="flex items-center justify-center gap-x-3 rounded-lg px-9 py-3.5 bg-primary text-white">
+          class="flex items-center justify-center gap-x-3 rounded-lg px-9 py-3.5 bg-primary text-white hover:opacity-90 transition">
           <img src="/assets/images/icons/email.svg" alt="email" />
           Email Me
         </a>
         <a
           href="{{ .resume }}"
-          class="flex items-center justify-center gap-x-3 rounded-lg px-9 py-3.5 border-2 border-primary text-primary hover:opacity-90 transition">
+          class="flex items-center justify-center gap-x-3 rounded-lg px-9 py-3.5 border-2 border-primary text-primary hover:opacity-80 transition">
           <img src="/assets/images/icons/file.svg" alt="resume" />
           Resume
         </a>
