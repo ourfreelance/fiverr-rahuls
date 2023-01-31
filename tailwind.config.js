@@ -36,7 +36,6 @@ module.exports = {
     },
     fontFamily: {
       lexend: 'Lexend, sans-serif',
-      mdmono: "'DM Mono', monospace",
     }
   },
   plugins: [
