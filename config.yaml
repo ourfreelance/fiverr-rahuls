@@ -26,6 +26,13 @@ params:
   type: "website"
   email: 'rahuls@gmail.com'
 
+  social_media:
+    facebook_url: "#"
+    twitter_url: "#"
+    telegram_url: "#"
+    linkedin_url: "#"
+    whatsapp_url: "https://wa.me/0880044332"
+
 
   company:
     - name: 'About'

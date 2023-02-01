@@ -33,7 +33,9 @@ function searchContent(query) {
           title: window.store[key].title,
           thumbnail: window.store[key].thumbnail,
           url: window.store[key].url,
-          url_visit_web: window.store[key].url_visit_web
+          authorName: window.store[key].authorName,
+          authorImage: window.store[key].authorImage,
+          date: window.store[key].date
         })
       }
     })
@@ -55,19 +57,22 @@ function displayResults (results, store) {
     for (const n in results) {
       const item = store[results[n].ref]
       resultList += `
-        <article class="post-card relative rounded-lg">
-          <img class="w-full h-full object-cover" src="${item.thumbnail}" alt="${item.title}">
-          <div class="absolute flex items-center gap-x-3 bottom-2 md:bottom-6 right-2 md:right-6 bg-transparent md:bg-light p-3.5 rounded-lg">
-            <a href="${item.url}" class="flex items-center gap-x-3 p-4 w-full md:w-auto text-center rounded-lg bg-white text-primary text-sm md:text-base font-medium hover:opacity-90 transition">
-              <img src="/assets/images/icons/book.svg" alt="view case study">
-              <span class="hidden md:block">View Case Study</span>
-            </a>
-            <a href="${item.url}" class="flex items-center gap-x-3 p-4 w-full md:w-auto text-center rounded-lg bg-primary text-white text-sm md:text-base font-medium hover:opacity-90 transition">
-              <img src="/assets/images/icons/link.svg" alt="visit website">
-              <span class="hidden md:block">Visit Website</span>
-            </a>
+        <article class="post-card">
+          <a href="${item.url}" class="block relative rounded-lg aspect-[15/9] w-full overflow-hidden">
+            <img class="w-full h-full object-cover" src="${item.thumbnail}" alt="${item.title}" />
+          </a>
+          <a href="${item.url}" class="text-primary text-xl font-bold my-5 line-clamp-3">${item.title}</a>
+          <div class="flex items-center gap-x-4">
+            <img src="${item.authorImage}" class="rounded-full w-[44px] md:w-[55px] aspect-square object-cover" alt="${item.authorName}">
+            <div>
+              <h3 class="font-bold mb-2 text-sm md:text-base">${item.authorName}</h3>
+              <div class="flex items-center gap-x-2 text-xs md:text-sm text-gray">
+                <time>${item.date}</time>
+                -
+                <p>  ${Math.floor(item.readTime)} Mins Read</p>
+              </div>
+            </div>
           </div>
-          
         </article>
       `
     }

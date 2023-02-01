@@ -1,0 +1,88 @@
+<aside class="sticky top-5 col-span-3 my-20 md:mt-0">
+  <!-- Search Input -->
+  <form
+    id="search"
+    action='{{ with .GetPage "/search" }}{{.Permalink}}{{end}}'
+    method="get"
+    class="relative mb-10">
+    <img
+      class="absolute top-1/2 left-3 -translate-y-1/2"
+      src="/assets/images/icons/search.svg"
+      alt="search" />
+    <input
+      id="search-input"
+      name="query"
+      class="search-content w-full py-3 rounded-lg border focus:outline-none pl-12"
+      type="text"
+      placeholder="Search.." />
+  </form>
+
+  <div class="mb-10">
+    <div class="flex items-center gap-x-3">
+      <h2 class="text-2xl font-bold">Categories</h2>
+      <div class="w-20 h-2 rounded-full bg-primary -mb-0.5"></div>
+    </div>
+    <div class="flex flex-col gap-2 mt-5">
+      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+      <a
+        href="/tags/{{$name}}"
+        class="bg-white hover:bg-light border rounded-lg px-4 py-2 capitalize">
+        {{$name}}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="mb-10">
+    <div class="flex items-center gap-x-3">
+      <h2 class="text-2xl font-bold">Tags</h2>
+      <div class="w-20 h-2 rounded-full bg-primary -mb-0.5"></div>
+    </div>
+    <div class="flex gap-2 mt-5">
+      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+      <a href="/tags/{{$name}}" class="bg-white hover:bg-light border rounded-lg px-4 py-2">
+        #{{$name}}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center gap-x-3">
+      <h2 class="text-2xl font-bold">Social</h2>
+      <div class="w-20 h-2 rounded-full bg-primary -mb-0.5"></div>
+    </div>
+    <div class="flex items-center flex-wrap gap-2 py-4">
+      <a
+        href="{{ .Site.Params.Social_media.Facebook_url }}"
+        class="bg-white rounded-lg aspect-square w-12 md:w-10 flex items-center justify-center border hover:-translate-y-1 transition hover:shadow-md">
+        <img src="/assets/images/social-media/facebook.svg" alt="facebook" />
+      </a>
+      <a
+        href="{{ .Site.Params.Social_media.Twitter_url }}"
+        class="bg-white rounded-lg aspect-square w-12 md:w-10 flex items-center justify-center border hover:-translate-y-1 transition hover:shadow-md">
+        <img src="/assets/images/social-media/twitter.svg" alt="facebook" />
+      </a>
+      <a
+        href="{{ .Site.Params.Email }}"
+        class="bg-white rounded-lg aspect-square w-12 md:w-10 flex items-center justify-center border hover:-translate-y-1 transition hover:shadow-md">
+        <img src="/assets/images/social-media/email.svg" alt="email" />
+      </a>
+      <a
+        href="{{ .Site.Params.Social_media.Telegram_url }}"
+        class="bg-white rounded-lg aspect-square w-12 md:w-10 flex items-center justify-center border hover:-translate-y-1 transition hover:shadow-md">
+        <img src="/assets/images/social-media/telegram.svg" alt="telegram" />
+      </a>
+      <a
+        href="{{ .Site.Params.Social_media.Linkedin_url }}"
+        class="bg-white rounded-lg aspect-square w-12 md:w-10 flex items-center justify-center border hover:-translate-y-1 transition hover:shadow-md">
+        <img src="/assets/images/social-media/linkedin.svg" alt="linkedin" />
+      </a>
+      <a
+        href="{{ .Site.Params.Social_media.Whatsapp_url }}"
+        class="bg-white rounded-lg aspect-square w-12 md:w-10 flex items-center justify-center border hover:-translate-y-1 transition hover:shadow-md">
+        <img src="/assets/images/social-media/whatsapp.svg" alt="whatsapp" />
+      </a>
+    </div>
+  </div>
+</aside>
