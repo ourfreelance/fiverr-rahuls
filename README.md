@@ -1,8 +1,8 @@
 # Rahuls Site
 
 ```
-minimum hugo version 0.92.2
-tailwindcss version 3.1.5
+minimum hugo version v0.101.0
+tailwindcss version ^3.1.5
 ```
 
 # Setup dev env
