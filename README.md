@@ -9,7 +9,7 @@ tailwindcss version 3.1.5
 
 Run "npm install" (first time only)
 
-Then configure `config.toml`
+Then configure `config.yaml` to setting your name, description, email, social media link and footer menu list
 
 # Run hugo server
 
@@ -22,7 +22,7 @@ hugo server
 2. run tailwindcss server (if you edit some style with tailwindcss)
 
 ```
-npm run tailwind-dev
+npm run dev
 ```
 
 Tailwind CSS file located at `./tailwindcss`.
@@ -34,14 +34,19 @@ Generated Tailwind CSS located at `./static/css/main.css`.
 hugo --ignoreCache --minify
 ```
 
-# To create new page
+# To create new portfolio
 
 ```
-hugo new posts/page-name/index.md
+hugo new portfolio/your-portfolio-name.md
 ```
 
-and then edit file located at `./content/posts/page-name/index.md`, setup frontmatter, add your thumbnail image and lets write your content
+# To create new blog post
 
+```
+hugo new blog/your-blog-title.md
+```
+
+and then edit file located at `./content/portfolio/your-portfolio-name.md` or `./content/blog/your-blog-title.md`, setup frontmatter, add your thumbnail image and lets write your content
 
 # Markdown custom shortcode
 
@@ -66,6 +71,10 @@ create image view
 {{< image src="images/blueridge_moubtains_blacksburg.png" alt="the blue ridge mountains around VT" show-alt="true">}}
 ```
 
-# Add new image of gallery
+## change home page wording
 
-just add new image at `static/assets/image/gallery/your-image.png`
+open file located at  `./content/home/hero.md`, `./content/home/portfolio.md`, `./content/home/about.md`. than edit wording you want change.
+
+## change about company wording
+
+open file located at  `./content/about-company.md`. than edit wording you want change.

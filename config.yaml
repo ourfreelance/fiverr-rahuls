@@ -29,7 +29,6 @@ params:
     linkedin_url: "#"
     whatsapp_url: "https://wa.me/0880044332"
 
-
   company:
     - name: 'About'
       url: '#'
