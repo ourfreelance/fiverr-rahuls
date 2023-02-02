@@ -1,24 +1,64 @@
 {{ define "main" }}
-<main class="pt-32 max-w-screen-xl px-5 mx-auto space-y-52 ">
-  <section class="mt-10">
-
-    {{ partial "components/section-title.html" (dict 
-      "title" .Params.Title
-      "description" .Params.Description
-    )}}
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10">
-      {{ range .Pages }}
-        {{if not (in .Params.IsIndex true)}}
-          {{ partial "components/post-card.html" (dict 
-            "date" .Date.Local
-            "params" .Params
-            "summary" .Summary
-            "url" .RelPermalink
-          )}}
-        {{ end}}
-      {{end}}
+<main class="py-12 md:py-32 max-w-screen-xl px-5 mx-auto">
+  <div class="flex justify-start mb-3 md:mb-4">
+    <div class="mb-10 flex flex-col items-start justify-center">
+      <div class="w-20 h-2 rounded-full bg-primary mb-4"></div>
+      <h2 class="text-2xl md:text-3xl font-bold uppercase ">BLOG: <span class="text-primary">{{ .Params.Title }}</span></h2>
     </div>
-  
-  </section>
+  </div>
+
+  <div class="lg:grid grid-cols-12 gap-x-8">
+    <section class="col-span-9 pr-0 md:pr-4">
+      {{ $paginate := .Paginate (where .Site.RegularPages "Type" "blog" )}} 
+      {{ $paginator := .Paginator }} {{ if $paginate.Pages }}
+      <div class="post-container grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-12">
+        {{ range $paginate.Pages }} 
+          {{ $readTime := mul (div (countwords .Content) 220.0) 60 }} 
+          {{ partial "components/blog-card.html" (dict 
+            "title" .Params.Title 
+            "thumbnail" .Params.Thumbnail 
+            "authorImage" .Params.AuthorImage 
+            "authorName" .Params.AuthorName 
+            "date" .Date 
+            "readTime" $readTime 
+            "url" .RelPermalink 
+          )}} 
+        {{end}}
+      </div>
+
+      <div class="mt-16 :mt-24 flex justify-center w-full">
+        {{- if $paginator.HasNext -}}
+        <a
+          href="{{ $paginator.Next.URL }}"
+          class="post-load-more font-roboto block py-4 px-8 rounded-lg bg-primary text-white font-medium hover:opacity-90 transition">
+          Load More
+        </a>
+        {{- end -}}
+      </div>
+
+      {{ else}}
+      <div class="text-primary-gray/70 font-medium text-lg">Post not found.</div>
+      {{ end }}
+    </section>
+
+    {{ partial "blog-sidebar.html" . }}
+  </div>
 </main>
+{{ end }} {{ define "scripts" }}
+
+<script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+<script>
+  const postContainer = document.querySelector('.post-container');
+
+  const options = {
+    path: '.post-load-more',
+    append: '.post-card',
+    loadOnScroll: false,
+    button: '.post-load-more',
+    history: null,
+  };
+
+  new InfiniteScroll(postContainer, options);
+</script>
+
 {{ end }}

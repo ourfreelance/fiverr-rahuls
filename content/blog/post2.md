@@ -1,9 +1,9 @@
 ---
 date: 2023-01-31T14:50:35+07:00
-title: "Using Distribution to Enhance Your Understanding of Weekly Stock Returns"
-thumbnail: "/assets/images/img1.png"
+title: "Using Distribution to Enhance Your Understanding of Weekly Stock Returns 2"
+thumbnail: "/assets/images/img2.png"
 tags: ['blogger', 'article']
-categories: ['Data']
+categories: ['Technology']
 keyword: ['blog', 'article']
 authorName: "Rahul Sharma"
 authorImage: "/assets/images/profile2.png"

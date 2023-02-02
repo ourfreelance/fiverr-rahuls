@@ -1,7 +1,7 @@
 <script>
   window.store = {
       // You can specify your blog section only:
-      {{ range .Site.RegularPages }}
+      {{ range where .Site.RegularPages "Type" "blog" }}
       {{ $readTime := mul (div (countwords .Content) 220.0) 60 }} 
       {{ $formatDate := time.Format "January 2, 2006" .Date  }}
       // For all pages in your site, use "range .Site.Pages"
