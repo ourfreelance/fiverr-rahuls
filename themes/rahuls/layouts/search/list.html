@@ -9,14 +9,27 @@
 
   <div class="lg:grid grid-cols-12 gap-x-8">
     <section class="col-span-9 pr-0 md:pr-4">
-      <div id="results" class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-12">
+      <div id="results" class="post-container grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-12">
         <p>Result: Not Found</p>
       </div>
 
-      
+      <div class="mt-16 :mt-24 flex justify-center w-full">
+        {{- if $paginator.HasNext -}}
+        <a
+          href="{{ $paginator.Next.URL }}"
+          class="post-load-more font-roboto block py-4 px-8 rounded-lg bg-primary text-white font-medium hover:opacity-90 transition">
+          Load More
+        </a>
+        {{- end -}}
+      </div>
     </section>
 
     {{ partial "blog-sidebar.html" . }}
   </div>
 </main>
+{{ end }} {{ define "scripts" }}
+
+<script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
 {{ end }}
