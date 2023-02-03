@@ -1,6 +1,6 @@
 ---
 date: 2023-01-31T14:50:35+07:00
-title: "Using Distribution to Enhance Your Understanding of Weekly Stock Returns"
+title: "Markdown Cheatset"
 thumbnail: "/assets/images/img1.png"
 tags: ['blogger', 'article']
 categories: ['Data']
@@ -11,24 +11,175 @@ draft: false
 toc: true
 ---
 
-As investors look to maximize their insights and make informed decisions, distribution analysis of weekly stock returns can be a valuable tool for any investor looking to maximize their understanding of the performance of their portfolio and make informed decisions about their investments.
+# H1 Heading
+## H2 Heading
+### H3 Heading
+#### H4 Heading
+##### H5 Heading
+###### H6 Heading
 
-Tesla’s recent performance has been making headlines, as the company has experienced an unusually bad week in terms of stock returns. 
+___
 
-This has led many investors to question what is behind the dip in performance and whether it is a temporary blip or a sign of more significant underlying issues.
 
-One way to get a clearer understanding of the situation is by looking at the distribution of Tesla’s weekly returns. 
+# Paragraph
 
-By analyzing the range of values that the stock’s returns have taken on over time, investors can get a sense of the underlying distribution of risk and potential outcomes.
+Lorem ipsum dolor sit amet consectetur. Nisl arcu ultrices aliquam proin ultricies viverra. Tortor odio viverra pulvinar nam ultrices. Non sapien augue sodales aenean massa tincidunt enim at. Augue auctor arcu pharetra sed in nisi. Lobortis tristique magna commodo ut et et. Ullamcorper sociis felis ipsum scelerisque non purus morbi. Elementum egestas enim ac vestibulum cursus quam. Sem velit sed ornare amet. Viverra risus feugiat dictum sed praesent tortor consectetur lacus.
 
-For example, if Tesla’s distribution of returns shows a wide range of values with both high and low returns, it could indicate a higher level of volatility and risk. On the other hand, if the distribution is more narrow and consistent, it could suggest a lower level of risk.
+___
 
-By analyzing the distribution of Tesla’s weekly returns, investors can get a better sense of the potential risks and rewards associated with the stock and whether recent trend is typical or if it may be an anomalous occurrence.
 
-There are a few key benefits to using distribution to view weekly stock returns:
+# Emphasis :
 
-1. It helps you identify patterns and trends. By looking at the distribution of returns over time, you can spot patterns and trends that may not be immediately apparent when looking at raw data. This can help you make more informed predictions about the future performance of a stock or portfolio.
-2. It allows you to compare stocks. By comparing the distribution of returns for different stocks, you can see how they stack up against one another in terms of risk and potential reward. This can help you make more informed decisions about which stocks to include in your portfolio.
-3. It allows you to diversify your portfolio. By understanding the distribution of returns for different stocks, you can create a more diversified portfolio that is less susceptible to risk.
+1.Did you come here for something in particular or just general
 
-It’s important to note, however, that distribution analysis is just one tool among many and should be considered in the context of other factors such as company fundamentals and market conditions.
+2.Did you come here for something in **particular**
+
+3._Did you come here_
+
+4.Did you come here for something in {{< rawhtml >}} <ins><b>particular</b><ins>{{< /rawhtml >}}
+
+5.{{< rawhtml >}}<ins>Did you come here for something in particular<ins>{{< /rawhtml >}}
+
+6.Did you come here for something in {{< rawhtml >}} <strike>particular</strike> {{< /rawhtml >}}
+
+7.URLs and URLs in angle brackets will automatically get turned into links. http://www.example.com or
+
+8.[http://www.example.com](http://www.example.com) and sometimes example.com (but not on Github, for example).
+
+___
+
+
+# Ordered list
+
+1. you appeared for an instant to be in two places at once.
+2. We have a saboteur aboard.
+3. you appeared for an instant to be in two places at once.
+
+
+___
+
+
+# Unordered list
+
+- you appeared for an instant to be in two places at once.
+- We have a saboteur aboard.
+- you appeared for an instant to be in two places at once.
+
+
+___
+
+
+# Code and Syntax Highlighting
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello</title>
+</head>
+<body>
+  Hello World!!
+</body>
+</html>
+```
+
+
+```javascript
+var s = "JavaScript syntax highlighting";
+const plukDeop = key => obj => key.split
+const compose = key => obj => key.split
+alert(s);
+```
+
+
+___
+
+
+# Button
+
+{{< rawhtml >}} 
+<div class="pt-6 pb-16 ">
+    <a href="#"
+      class="px-6 py-3 rounded-md border dark:border-white/10 text-primary-blue hover:bg-gray-100 transition">
+      Button
+    </a>
+  </div> 
+{{< /rawhtml >}}
+
+{{< button-link href="https://your-url.com">}}
+  Your Text
+{{< /button-link >}}
+
+{{< button-link href="https://your-url.com" center="true">}}
+  Your Text
+{{< /button-link >}}
+
+
+
+___
+
+
+# Quote
+
+> “Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once.”
+
+
+
+___
+
+
+# Table
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       | 
+| Paragraph   | Text        |
+
+
+| #        | Last              |    Handle        |
+| :---     |    :----:   |          ---:    |
+| 1        | Row:1 Cell:1      | Row:1 Cell:3     |
+| 2        | Row:2 Cell:1      | Row:2 Cell:3     |
+| 3        | Row:3 Cell:1      | Row:3 Cell:3     |
+
+
+___
+
+
+# Image
+
+![img1](/assets/images/img1.png)
+
+___
+
+
+# Twitter
+
+{{< tweet user="WeRateDogs" id="1621194951601315840" >}}
+
+
+
+
+___
+
+
+# Youtube
+
+{{< iframe "https://www.youtube.com/embed/mqqft2x_Aa4" >}}
+
+
+
+
+___
+
+
+### Emoji Support
+
+Please take a look at [emoji cheatsheet](https://www.webfx.com/tools/emoji-cheat-sheet/). :smile:
+
+or on windows 10/11 , you can press `window + .`  than popup emoji will showing 😎
+
+
+
+&nbsp;

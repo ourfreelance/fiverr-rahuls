@@ -6,7 +6,7 @@ module.exports = {
     "./themes/rahuls/layouts/**/*.html",
     "./themes/rahuls/layouts/**/*.js",
     "./themes/rahuls/static/**/*.js",
-
+    "./content/**/*.md"
   ],
   darkMode: 'class',
   theme: {
